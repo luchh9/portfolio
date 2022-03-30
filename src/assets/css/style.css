@@ -1,35 +1,29 @@
+/* footer font */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=Fira+Sans:wght@600&display=swap");
+
 /* single day (LOGO font) */
 @import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
 /* font-family: "Single Day", cursive; */
 
-/* font-family: 'Open Sans', sans-serif; */
-
 /* text font */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-/* font-family: 'Roboto', sans-serif; */
-
-/* poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 /* font-family: 'Poppins', sans-serif; */
-
+html {
+  user-select: none;
+}
 a:link {
   text-decoration: none;
   color: #163057 !important;
 }
+
 .border {
   border: solid 1px white;
 }
 body {
-  background: rgb(208, 208, 208);
-  background: linear-gradient(
-    0deg,
-    rgba(208, 208, 208, 1) 69%,
-    rgb(186 193 255) 54%
-  );
+  background: rgba(186, 193, 255, 1);
   scroll-behavior: smooth;
   scroll-padding-top: 300px;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -54,7 +48,6 @@ p {
   font-family: "Fira Sans", sans-serif;
   word-wrap: break-word;
 }
-/* .name es una clase vacia */
 .name span {
   margin-left: 10px;
   font-size: 5rem;
@@ -79,13 +72,10 @@ p {
 
 /* ABOUT */
 .about-container {
-  background: #889fdb;
+  margin-top: 200px;
   height: 30%;
 }
 
-#team-project-span {
-  color: rgb(0, 0, 0);
-}
 .about-text {
   margin-top: 30px;
   word-spacing: 1px;
@@ -100,9 +90,12 @@ p {
   box-shadow: 3px 5px 20px black;
 }
 
+.about-container h1,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
 .avatar {
   width: 20rem;
-  background-color: #163057;
   border-radius: 50%;
 }
 
@@ -114,14 +107,26 @@ p {
   margin: 20px 0px 0px;
   overflow: hidden;
   list-style: none;
+  font-family: "Poppins", sans-serif;
 }
 
-.tecnologies-img {
-  margin-top: 20px;
-  width: 20rem;
+.tecnologies-images img {
+  width: 40px;
+  height: 40px;
 }
 
 /* PORTFOLIO */
+
+.portfolio {
+  margin-top: 200px;
+}
+
+.caca {
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 2px 24px rgba(118, 118, 118, 0.5);
+}
 .portfolio .row {
   margin-top: 60px;
   margin-bottom: 100px;
@@ -153,7 +158,6 @@ p {
 
 .single-proyect {
   padding-bottom: 15px;
-  border-bottom: #979797 solid 1px;
 }
 
 .proyect-links {
@@ -176,6 +180,7 @@ p {
 .contact-section {
   background-color: #0d1520;
   color: rgb(211, 211, 211);
+  font-family: "Open Sans", sans-serif;
 }
 .contact-section h1 {
   padding-top: 60px;
@@ -274,7 +279,7 @@ p {
   }
 
   .header-text p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .logo {
@@ -286,6 +291,7 @@ p {
   .avatar {
     background-color: rgba(202, 138, 41, 0);
     border-radius: 50%;
+    margin-top: 100px;
   }
   .portfolio img {
     width: 370px;
@@ -309,17 +315,13 @@ p {
   font-size: 0.7rem;
   background-color: #0d1520;
 }
-/* 
-.caca {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 30px 0px 0px;
-  background-color: #051f5f;
+
+.box {
+  background-color: #0d1520;
+  width: 30px;
+  height: 30px;
 }
 
-.square {
-  background-color: #000000;
-  background: url("./images/Logomf.png");
-} */
+.svg {
+  margin-top: 150px;
+}

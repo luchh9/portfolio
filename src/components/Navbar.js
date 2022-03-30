@@ -1,12 +1,17 @@
 import React from "react";
 import logo from "../assets/statics/Logo.png";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   return (
-    <div className="container">
+    <motion.div
+      className="container"
+      animate={{ y: [-500, 0] }}
+      transition={{ duration: 1 }}
+    >
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid ">
-          <img className="logo" src={logo} />
+          <img className="logo" src={logo} alt="logo" />
           <button
             className="navbar-toggler"
             type="button"
@@ -37,6 +42,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 }
