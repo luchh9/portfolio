@@ -1,6 +1,5 @@
 import React from "react";
 import avatar from "../assets/statics/lm-avatar.png";
-import tecnologies from "../assets/statics/tecnologies.png";
 import { motion } from "framer-motion";
 import git from "../assets/statics/git-logo.png";
 import figma from "../assets/statics/figma-logo.png";
@@ -8,18 +7,50 @@ import html from "../assets/statics/html-logo.png";
 import css from "../assets/statics/css-logo.png";
 import js from "../assets/statics/js-logo.png";
 import react from "../assets/statics/react-logo.png";
+import npm from "../assets/statics/npm-logo.png";
+import sql from "../assets/statics/sql.png";
 
 export default function About() {
-  const tecnologies_logos = [];
+  const tecnologies = [html, css, js, react, git, figma, sql, npm];
+
+  const list = {
+    hidden: { opacity: 0.1 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const text = {
+    hidden: {
+      opacity: 0,
+      y: 200,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -200,
+    },
+  };
 
   return (
     <section id="about" className="about-container">
       <div className="container">
         <div className="row">
           <motion.div
-            whileInView={{ scale: [0.5, 1], x: [-700, 0], opacity: [0, 1] }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            variants={text}
+            initial="hidden"
+            whileInView="show"
+            exit="exit"
             className="col-sm-6"
           >
             <h1>About me</h1>
@@ -35,40 +66,37 @@ export default function About() {
               communication and teamwork, and use of tools such as Jira, Slack,
               Bitbucket/Github, etc.
             </p>
-            <h3>Tecnologies</h3>
-            <ul className="skill-list">
-              <li>- HTML</li>
-              <li>- Bootstrap</li>
-              <li>- CSS</li>
-              <li>- Git/Github</li>
-              <li>- Javascript</li>
-              <li>- SQL</li>
-              <li>- React js</li>
-              <li>- npm</li>
-            </ul>
           </motion.div>
           <div className="col-md-6 centrado">
             <motion.img
               className="avatar centrar"
               src={avatar}
               alt="avatar"
-              whileInView={{ scale: [0, 1], backgroundColor: "#163057" }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
+              animate={{ y: [0, 5, -5, 0] }}
+              transition={{ repeat: Infinity, duration: 4 }}
             ></motion.img>
           </div>
         </div>
-        {/* <div className="row">
-          <div className="tecnologies-images">
-            <img src={figma} alt="" />
-            <img src={git} alt="" />
-            <img src={html} alt="" />
-            <img src={css} alt="" />
-            <img src={js} alt="" />
-            <img src={react} alt="" />
-            <img src="npm" alt="" />
-          </div>
-        </div> */}
+        <div className="row tecnologies">
+          <motion.h3 variants={text} whileInView="show" initial="hidden">
+            Tecnologies
+          </motion.h3>
+
+          <motion.ul
+            className="skill-list2"
+            variants={list}
+            initial="hidden"
+            whileInView="show"
+          >
+            {tecnologies.map((i) => {
+              return (
+                <motion.li variants={text}>
+                  <img src={i} alt="" srcset="" />
+                </motion.li>
+              );
+            })}
+          </motion.ul>
+        </div>
       </div>
     </section>
   );

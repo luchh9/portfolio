@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <motion.div
       className="container"
-      animate={{ y: [-500, 0] }}
+      animate={{ y: [-600, 0] }}
       transition={{ duration: 1 }}
     >
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -21,7 +21,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"> </span>
           </button>
 
           <div

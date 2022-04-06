@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 export default function Proyect(props) {
   const { title, description, code, img, tecnologies } = props.item;
-
   return (
     <div className="row single-proyect">
       <motion.div
@@ -31,9 +30,10 @@ export default function Proyect(props) {
       </motion.div>
       <div className="col-md-6">
         <motion.img
-          whileInView={{ scale: [0.5, 1], opacity: [0, 1] }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          // whileInView={{ scale: [0.5, 1], opacity: [0, 1] }}
+          // viewport={{ once: true }}
+          // transition={{ duration: 0.7 }}
+          whileHover={{ scale: 0.9 }}
           src={img}
           alt="proyect img"
         />

@@ -28,7 +28,7 @@ export default function Header() {
             transition={{ type: "spring", duration: 1.7 }}
           >
             <p className="description">
-              I&apos;m a Front-end developer who likes to create and design.
+              I&apos;m a Front-end developer.
               <br></br>
               Currently I focus on creating projects and learning new
               technologies.

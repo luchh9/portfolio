@@ -6,15 +6,14 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Svg from "./components/Svg";
 import Portfolio from "./components/Portfolio";
-
+import Background from "./components/Background";
 function App() {
   return (
     <>
+      <Background />
       <Navbar />
       <Header />
-
       <About />
-
       <Portfolio />
       <Svg
         fill="#0d1520"
