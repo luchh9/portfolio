@@ -28,7 +28,7 @@ export default function Navbar() {
             className="collapse navbar-collapse background-collapse"
             id="navbarNavAltMarkup"
           >
-            <div className="navbar-nav">
+            <div className="navbar-nav" style={{ margin: "0px 90px" }}>
               <a href="#about" className="nav-link">
                 About me
               </a>

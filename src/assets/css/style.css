@@ -13,7 +13,7 @@ html {
 }
 a:link {
   text-decoration: none;
-  color: #163057 !important;
+  color: #e4e4e4 !important;
 }
 
 .border {
@@ -62,6 +62,8 @@ p {
   font-size: 2.8rem;
 }
 .header-text p {
+  margin-top: 20px;
+
   border-left: #999 solid 1px;
   padding-left: 10px;
   color: rgb(192, 192, 192);
@@ -69,7 +71,7 @@ p {
 }
 .header {
   margin-top: 50px;
-  background-image: url(../statics/Planet2.png);
+  background-image: url(../statics/Planet.png);
   background-repeat: no-repeat;
   background-position: 80% 50%;
   background-size: 200px;
@@ -205,7 +207,7 @@ h3 {
   padding-top: 60px;
 }
 .mail-container img{
-  width: 30%;
+  width: 20%;
   margin: 30px 0px;
 }
 
@@ -239,9 +241,9 @@ h3 {
 }
 
 .nav-link {
-  color: #dcdcdc !important;
+  color: #ffffff !important;
   margin-left: 130px;
-  background-image: linear-gradient(rgb(31, 31, 31), rgb(0, 0, 0));
+  background-image: linear-gradient(rgb(217, 217, 217), rgb(0, 31, 133));
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
@@ -250,21 +252,14 @@ h3 {
 
 .nav-link:hover {
   background-size: 100% 2px;
-  color: rgb(220, 220, 220) !important;
-}
-
-.navbar-toggler-icon {
-  color: rgb(255, 255, 255) !important;
 }
 
 .navbar-toggler:focus {
   box-shadow: none;
 }
-
-.collapse {
-  width: 10px !important;
-}
-
+ .navbar-toggler {
+  background-color: rgba(240, 248, 255, 0.73);
+ }
 /* MEDIAQUERIES */
 @media only screen and (max-width: 575px) {
   .nav-link {
@@ -286,10 +281,6 @@ h3 {
 
   .header-text h1 {
     font-size: 2.1rem;
-  }
-
-  .header-text h2 {
-    font-size: 2rem;
   }
 
   .header-text p {
@@ -334,10 +325,3 @@ h3 {
   font-size: 0.7rem;
   background-color: #0d1520;
 }
-
-.box {
-  background-color: #0d1520;
-  width: 30px;
-  height: 30px;
-}
-
