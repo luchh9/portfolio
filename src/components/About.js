@@ -1,4 +1,6 @@
 import React from "react";
+import "../assets/css/About.css";
+
 import avatar from "../assets/statics/lm-avatar.png";
 import { motion } from "framer-motion";
 import git from "../assets/statics/git-logo.png";
@@ -55,9 +57,10 @@ export default function About() {
           >
             <h1>About me</h1>
             <p className="about-text">
-              Hello! My name is Luciano but you can call me Mario. <br />
-              I'm a student and I like coding things from scratch. My dream is
-              to become an excellent professional and I'm working for it.
+              Hello! My name is Luciano Mariotti but you can call me Mario.{" "}
+              <br />
+              I am a student who likes to create things from scratch and is
+              fascinated by the world of web development.
               <br />I program in React, design small things in Figma and I like
               to be detail-oriented. I have worked with SCRUM technologies and
               have some backend knowledge.

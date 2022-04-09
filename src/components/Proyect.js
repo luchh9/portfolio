@@ -28,11 +28,9 @@ export default function Proyect(props) {
           </ul>
         </motion.div>
       </motion.div>
-      <div className="col-md-6">
+      <div className="col-md-4 ">
         <motion.img
-          // whileInView={{ scale: [0.5, 1], opacity: [0, 1] }}
-          // viewport={{ once: true }}
-          // transition={{ duration: 0.7 }}
+          className="imagen"
           whileHover={{ scale: 0.9 }}
           src={img}
           alt="proyect img"

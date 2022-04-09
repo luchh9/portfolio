@@ -3,6 +3,7 @@ import Proyect from "./Proyect";
 import proyectImg from "../assets/statics/Group_1.png";
 import Sticker_screen from "../assets/statics/StickStore_1.png";
 import Hero_screen from "../assets/statics/hero_1.png";
+import "../assets/css/Portfolio.css";
 
 export default function Portfolio() {
   const proyects = [

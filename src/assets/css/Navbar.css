@@ -1,0 +1,26 @@
+.navbar {
+    margin-top: 30px !important;
+    height: 100px;
+    z-index: 4;
+  }
+  
+  .nav-link {
+    color: #ffffff !important;
+    margin-left: 130px;
+    background-image: linear-gradient(rgb(217, 217, 217), rgb(0, 31, 133));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+  }
+  
+  .nav-link:hover {
+    background-size: 100% 2px;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+   .navbar-toggler {
+    background-color: rgba(240, 248, 255, 0.73);
+   }

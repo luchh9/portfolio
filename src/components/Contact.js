@@ -3,6 +3,7 @@ import mail from "../assets/statics/Planet-mail.png";
 import { motion } from "framer-motion";
 import linkedin from "../assets/statics/linkedin.png";
 import github from "../assets/statics/github.png";
+import "../assets/css/Contact.css";
 
 export default function Contact() {
   return (
@@ -21,6 +22,7 @@ export default function Contact() {
               <img src={mail}></img>
             </a>
           </div>
+          {/* CON TIMES CAMBIAR EL ZINDEX Y HACER QUE UN PLANETA GIRE ALREDOR DEL SOL  */}
           <motion.button
             className="get-cv-button"
             whileInView={{ scale: [0.8, 1], opacity: [0, 1], y: [40, 0] }}

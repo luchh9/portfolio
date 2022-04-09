@@ -1,0 +1,35 @@
+
+
+.contact-section {
+    /* background-color: #0d1520; */
+    color: rgb(23, 23, 23);
+  }
+  .contact-section h1 {
+    padding-top: 60px;
+  }
+  .mail-container img{
+    width: 20%;
+    margin: 30px 0px;
+  }
+  
+  .get-cv-button {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 1.5em;
+  }
+  
+  .redes {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon {
+    border-radius: 10px;
+    padding: 2px;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+  }
