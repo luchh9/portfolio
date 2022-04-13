@@ -28,7 +28,7 @@ export default function Proyect(props) {
           </ul>
         </motion.div>
       </motion.div>
-      <div className="col-md-4 ">
+      <div className="col-md-6 ">
         <motion.img
           className="imagen"
           whileHover={{ scale: 0.9 }}

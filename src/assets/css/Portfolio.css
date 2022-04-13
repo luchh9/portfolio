@@ -14,8 +14,7 @@
 
   .portfolio img {
     width: 100%;
-    height: 280px;
-    /* SIN HEIGTH ES PREDERTERMINADO X LA FOTO */
+    /* height: 100%; */
     border-radius: 10px;
   }
 

@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import planet from "../assets/statics/Astronaut.png";
 export default function Header() {
   const x = useMotionValue(0);
   const input = [-200, 0, 200];
   const output = [0, 1, 0];
-  const opacity = useTransform(x, input, output);
   const input2 = [-100, 0, 100]; //rango entre tal y tal
   const output2 = [0, 1, 0]; // como se transformara, 40 para un lado y 100 de borderRadius para el otro
   const scale = useTransform(x, input2, output2);
@@ -30,7 +29,7 @@ export default function Header() {
               scale: 1.05,
             }}
             whileDrag={{ scale: 1.2 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 2, type: "ease" }}
             animate={{ x: [50, 0], opacity: [0.7, 1] }}
           />
         </motion.div>

@@ -1,12 +1,11 @@
 
 .footer-text {
-    color: rgba(0, 0, 0, 0.679);
+    color: rgba(218, 228, 255, 0.824);
     padding-top: 150px;
     padding-bottom: 20px;
   }
   .footer {
     font-family: "Fira Mono", monospace;
     font-size: 0.7rem;
-    /* background-color: #0d1520; */
   }
   

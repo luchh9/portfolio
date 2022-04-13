@@ -18,9 +18,9 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: "pokeApp",
+      title: "PokeApp",
       description:
-        "Aplicacion que puedes buscar cualquier superheroe! Puedes ver sus stats individualmente y formar equipos a tu gusto!",
+        "Buscador de pokemones. Revela toda la informacion del mismo.",
       code: "https://github.com/luchh9/superheroapp",
       img: proyectImg,
       tecnologies: ["CSS/Bootstrap", "React js"],
@@ -29,7 +29,7 @@ export default function Portfolio() {
       id: 3,
       title: "StickStore",
       description:
-        "Aplicacion que puedes buscar cualquier superheroe! Puedes ver sus stats individualmente y formar equipos a tu gusto!",
+        "Aplicacion first mobile. Un store de stickers y su carrito de compras!",
       code: "https://github.com/luchh9/superheroapp",
       img: Sticker_screen,
       tecnologies: ["CSS/Bootstrap", "React js"],
