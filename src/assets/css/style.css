@@ -58,7 +58,6 @@ h1 {
 .header-text p {
   margin-top: 20px;
   z-index: 1;
-
   border-left: #999 solid 1px;
   padding-left: 10px;
   color: rgb(192, 192, 192);
@@ -86,12 +85,16 @@ h1 {
   z-index: 4;
 }
 
+.navbar-collapse{
+  margin-left: 60%;
+}
 
 /* MEDIAQUERIES */
 @media only screen and (max-width: 575px) {
   .nav-link {
-    margin: 20px;
+    text-align: center;
     color: aliceblue !important;
+    margin: 5px 100px;
   }
 
   .navbar-brand {
@@ -104,6 +107,9 @@ h1 {
     box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
     backdrop-filter: blur(7px);
     border-radius: 10px;
+  }
+  .navbar-collapse{
+    margin: 0px;
   }
 
   .header-text h1 {
