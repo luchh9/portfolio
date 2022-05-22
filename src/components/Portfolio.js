@@ -1,8 +1,8 @@
 import React from "react";
 import Proyect from "./Proyect";
-import proyectImg from "../assets/statics/Group_1.png";
+// import proyectImg from "../assets/statics/Group_1.png";
 import Sticker_screen from "../assets/statics/StickStore_1.png";
-import Hero_screen from "../assets/statics/hero_1.png";
+import Hero_screen from "../assets/statics/Superhero_1.png";
 import "../assets/css/Portfolio.css";
 
 export default function Portfolio() {
@@ -22,7 +22,7 @@ export default function Portfolio() {
       description:
         "Buscador de pokemones. Revela toda la informacion del mismo.",
       code: "https://github.com/luchh9/superheroapp",
-      img: proyectImg,
+      img: Hero_screen,
       tecnologies: ["CSS/Bootstrap", "React js"],
     },
     {

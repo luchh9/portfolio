@@ -54,12 +54,13 @@ export default function About() {
             whileInView="show"
             exit="exit"
             className="col-sm-6"
+            viewport={{ once: true }}
           >
             <h1>About me</h1>
             <p className="about-text">
-              Hello! My name is Luciano Mariotti but you can call me Mario.{" "}
+              Hello! My name is Luciano Mariotti but you can call me Mario.
               <br />
-              I am a student who likes to create things from scratch and is
+              I'm a developer who likes to create things from scratch and is
               fascinated by the world of web development.
               <br />I program in React, design small things in Figma and I like
               to be detail-oriented. I have worked with SCRUM technologies and
@@ -81,7 +82,12 @@ export default function About() {
           </div>
         </div>
         <div className="row tecnologies">
-          <motion.h3 variants={text} whileInView="show" initial="hidden">
+          <motion.h3
+            variants={text}
+            whileInView="show"
+            initial="hidden"
+            viewport={{ once: true }}
+          >
             Tecnologies
           </motion.h3>
 

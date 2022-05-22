@@ -20,7 +20,7 @@ export default function Contact() {
     },
     {
       src: github,
-      href: "https://github.com/luchh9/",
+      href: "https://github.com/mariodev9/",
     },
   ];
 
@@ -87,7 +87,7 @@ export default function Contact() {
             whileInView="show"
           >
             {links.map((item) => (
-              <a href={item.href} title="Email me">
+              <a href={item.href} target="_blank">
                 <motion.img
                   src={item.src}
                   className="icon"
