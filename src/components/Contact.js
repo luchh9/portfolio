@@ -87,7 +87,7 @@ export default function Contact() {
             whileInView="show"
           >
             {links.map((item) => (
-              <a href={item.href} target="_blank">
+              <a href={item.href} target="_blank" key={item.href}>
                 <motion.img
                   src={item.src}
                   className="icon"

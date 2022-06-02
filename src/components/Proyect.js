@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Proyect(props) {
-  const { title, description, code, img, tecnologies } = props.item;
+  const { title, description, code, img, tecnologies, demo } = props.item;
+  console.log(window.location.href);
+
   return (
     <div className="row single-proyect">
       <motion.div
@@ -19,11 +21,16 @@ export default function Proyect(props) {
           transition={{ duration: 0.8 }}
         >
           <ul className="proyect-links">
-            <a href={code}>source code</a>
+            <a href={code}>Source code</a>
+            {demo !== "" ? (
+              <a href={demo} target="_blank" rel="noreferrer">
+                Demo
+              </a>
+            ) : null}
           </ul>
           <ul className="proyect-tecnologies">
             {tecnologies.map((item) => (
-              <li>{item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </motion.div>

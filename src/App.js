@@ -1,21 +1,40 @@
 import "./assets/css/style.css";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Portfolio from "./components/Portfolio";
 import Background from "./components/Background";
+import Home from "./pages/Home";
+import "./assets/css/Preloader.css";
+
+// const Preloader = () => (
+//   <motion.div
+//     className="preloader"
+//     initial={{ opacity: 0 }}
+//     animate={{ opacity: 1 }}
+//     exit={{ opacity: 0 }}
+//   >
+//     <h1>preloader</h1>
+//   </motion.div>
+// );
+
 function App() {
+  // const [loading, setLoading] = useState(true);
+
+  // setTimeout(() => {
+  //   setLoading(false);
+  // }, 3000);
+
   return (
     <>
       <Background />
-      <Navbar />
-      <Header />
-      <About />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <Home />
+
+      {/* {loading ? (
+        <Preloader />
+      ) : (
+        <>
+          <AnimatePresence>
+            <Home />
+          </AnimatePresence>
+        </>
+      )} */}
     </>
   );
 }

@@ -6,7 +6,8 @@ export default function Navbar() {
   return (
     <motion.div
       className="container"
-      animate={{ y: [-600, 0] }}
+      initial={{ opacity: 0 }}
+      animate={{ y: [-600, 0], opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -19,14 +20,14 @@ export default function Navbar() {
             fill="none"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M43.5328 0L30.3682 24H40.9896L42.9344 20.1212H44.2808L46.3003 24H56.6973L43.5328 0ZM42.4108 16.4848L40.7652 19.3939L40.466 16L41.8124 13.6566V11.2323L43.5328 8.08081L45.2532 11.2323V13.6566L46.7491 16L46.3003 19.3939L44.8044 16.4848H42.4108Z"
               fill="#D3D3D3"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M59.9137 0H72.6295C79.5857 -3.14892e-07 84.672 9.88679 75.397 14.2642C76.7434 14.7925 78.374 16.8151 82.2037 24H75.397L71.7319 17.1321C70.6099 15.0943 69.7871 15.0943 66.5708 15.0943V24H59.9137V12V0ZM70.8343 10.2642C75.397 10.2642 75.397 4.5283 70.8343 4.5283H66.5708V10.2642H70.8343Z"
               fill="#D3D3D3"
             />
@@ -61,7 +62,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"> </span>
+            <span className="navbar-toggler-icon"> </span>
           </button>
 
           <div

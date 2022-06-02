@@ -99,8 +99,8 @@ export default function About() {
           >
             {tecnologies.map((i) => {
               return (
-                <motion.li variants={text}>
-                  <img src={i} alt="" srcset="" />
+                <motion.li variants={text} key={i}>
+                  <img src={i} alt="tecnologies" />
                 </motion.li>
               );
             })}

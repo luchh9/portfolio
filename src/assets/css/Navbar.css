@@ -19,10 +19,26 @@
   background-size: 100% 2px;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
+.navbar-toggler {
+  background-color: rgb(255, 255, 255);
 }
 
-.navbar-toggler {
-  background-color: rgba(240, 248, 255, 0.73);
+.navbar-nav{
+  align-items:center ;
 }
+
+.navbar-collapse{
+  justify-content: end;
+
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) { 
+
+  .navbar-collapse {
+    background: rgb(0 0 0 / 5%);
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    backdrop-filter: blur(3px);
+
+  }
+ }
