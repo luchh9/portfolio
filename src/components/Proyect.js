@@ -40,7 +40,7 @@ export default function Proyect(props) {
         <p>{description}</p>
         <motion.div variants={list} initial="hidden" whileInView="show">
           <ul className="proyect-links">
-            <a href={code}>Source code</a>
+            <a href={code}>Codigo</a>
             {demo !== "" ? (
               <a href={demo} target="_blank" rel="noreferrer">
                 Demo

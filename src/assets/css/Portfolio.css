@@ -29,6 +29,7 @@
 
   .proyect-tecnologies {
     font-size: 0.9em;
+    font-weight: 800;
     color: #344d74;
     display: grid;
     grid-template-columns: repeat(3, minmax(140px, 200px));
@@ -52,5 +53,8 @@
   .proyect-links a {
     width: 110px;
     color: #d0d0d0 !important;
+    font-weight: 900;
+
+
   }
   

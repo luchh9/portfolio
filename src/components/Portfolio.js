@@ -43,7 +43,7 @@ export default function Portfolio() {
 
   return (
     <section id="proyects" className="portfolio">
-      <h1 className="centrar">Proyects</h1>
+      <h1 className="centrar">Proyectos</h1>
       <div className="container">
         {proyects.map((item) => (
           <Proyect item={item} key={item.id} />
