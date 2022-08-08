@@ -79,7 +79,7 @@ export default function Contact() {
               duration: 1.6,
             }}
           >
-            Contactame!
+            Contáctame!
           </motion.h1>
           <motion.div
             className="redes"
