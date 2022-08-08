@@ -69,6 +69,7 @@ export default function Contact() {
         />
         <div className="centrar">
           <motion.h1
+            viewport={{ once: true }}
             whileInView={{
               opacity: [0, 1],
               y: [200, 0],
@@ -85,9 +86,15 @@ export default function Contact() {
             variants={list}
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
           >
             {links.map((item) => (
-              <a href={item.href} target="_blank" key={item.href}>
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                key={item.href}
+              >
                 <motion.img
                   src={item.src}
                   className="icon"

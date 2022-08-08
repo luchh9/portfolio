@@ -3,6 +3,53 @@ import { motion } from "framer-motion";
 import "../assets/css/Navbar.css";
 
 export default function Navbar() {
+  const isSmallAnimation = window.matchMedia("(max-width: 600px)");
+
+  const svgVariants = isSmallAnimation.matches
+    ? {
+        hidden: {
+          scale: 2.5,
+          y: 200,
+          x: 100,
+        },
+        visible: {
+          y: 0,
+          x: 0,
+          scale: 1,
+          opacity: 1,
+          transition: { duration: 5, delay: 5, type: "spring" },
+        },
+      }
+    : {
+        hidden: {
+          scale: 3,
+          y: 260,
+          x: 140,
+        },
+        visible: {
+          y: 0,
+          x: 0,
+          scale: 1,
+          opacity: 1,
+          transition: { duration: 5, delay: 5, type: "spring" },
+        },
+      };
+
+  const pathVariants = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        duration: 4,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <motion.div
       className="container"
@@ -12,47 +59,56 @@ export default function Navbar() {
     >
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid ">
-          <svg
+          <motion.svg
             xmlns="http://www.w3.org/2000/svg"
-            width="130"
-            height="24"
-            viewBox="0 0 130 24"
+            width="131"
+            height="27"
+            viewBox="0 0 131 27"
             fill="none"
+            variants={svgVariants}
+            initial="hidden"
+            animate="visible"
           >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M43.5328 0L30.3682 24H40.9896L42.9344 20.1212H44.2808L46.3003 24H56.6973L43.5328 0ZM42.4108 16.4848L40.7652 19.3939L40.466 16L41.8124 13.6566V11.2323L43.5328 8.08081L45.2532 11.2323V13.6566L46.7491 16L46.3003 19.3939L44.8044 16.4848H42.4108Z"
-              fill="#D3D3D3"
+            <motion.path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M44.5328 2L31.3682 26H41.9896L43.9344 22.1212H45.2808L47.3003 26H57.6973L44.5328 2ZM43.4108 18.4848L41.7652 21.3939L41.466 18L42.8124 15.6566V13.2323L44.5328 10.0808L46.2532 13.2323V15.6566L47.7491 18L47.3003 21.3939L45.8044 18.4848H43.4108Z"
+              stroke="white"
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
             />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M59.9137 0H72.6295C79.5857 -3.14892e-07 84.672 9.88679 75.397 14.2642C76.7434 14.7925 78.374 16.8151 82.2037 24H75.397L71.7319 17.1321C70.6099 15.0943 69.7871 15.0943 66.5708 15.0943V24H59.9137V12V0ZM70.8343 10.2642C75.397 10.2642 75.397 4.5283 70.8343 4.5283H66.5708V10.2642H70.8343Z"
-              fill="#D3D3D3"
+            <motion.path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M60.9137 2H73.6295C80.5857 2 85.672 11.8868 76.397 16.2642C77.7434 16.7925 79.374 18.8151 83.2037 26H76.397L72.7319 19.1321C71.6099 17.0943 70.7871 17.0943 67.5708 17.0943V26H60.9137V14V2ZM71.8343 12.2642C76.397 12.2642 76.397 6.5283 71.8343 6.5283H67.5708V12.2642H71.8343Z"
+              stroke="white"
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
             />
-            <path
-              d="M25.9551 24V0H20.7192L13.015 13.6566L5.98389 0H0V24H5.98389V11.2323L11.2946 20.6792H14.8101L20.2704 10.8679V24H25.9551Z"
-              fill="#D3D3D3"
+            <motion.path
+              d="M26.9551 26V2H21.7192L14.015 15.6566L6.98389 2H1V26H6.98389V13.2323L12.2946 22.6792H15.8101L21.2704 12.8679V26H26.9551Z"
+              stroke="white"
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
             />
-            <path d="M84.672 0V24H91.1795V0H84.672Z" fill="#D3D3D3" />
-            <path
-              d="M106.659 21.8491C108.497 23.2049 110.732 24 113.143 24C117.825 24 121.845 21.0012 123.578 16.7208C117.418 20.8314 109.732 21.8524 106.659 21.8491Z"
-              fill="#D3D3D3"
+            <motion.path
+              d="M85.672 2V26H92.1795V2H85.672Z"
+              stroke="white"
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
             />
-            <path
-              d="M113.143 0C106.876 0 101.795 5.37258 101.795 12C101.795 13.7878 102.165 15.4843 102.828 17.0087C103.146 17.7399 103.532 18.4314 103.976 19.0745C110.501 18.3466 119.521 15.7434 124.47 12.7304C124.483 12.4888 124.49 12.2453 124.49 12C124.49 11.4335 124.453 10.8761 124.381 10.3304C123.613 4.49329 118.874 0 113.143 0Z"
-              fill="#D3D3D3"
+            <motion.path
+              d="M114.143 2C107.876 2 102.795 7.37258 102.795 14C102.795 14.716 102.855 15.4174 102.968 16.099M114.143 2C119.874 2 124.613 6.49329 125.381 12.3304M114.143 2C118.63 2 122.509 4.75478 124.35 8.75246M125.381 12.3304C128 11 127.5 10 124.844 10M125.381 12.3304C125.254 11.3625 125.177 10.8797 124.844 10M125.381 12.3304C123.592 13.276 119.594 14.9595 114.5 16.5C111.311 17.4642 107.779 18.3725 103.828 19.0087M124.35 8.75246C127.849 8.61333 134.855 8.63652 125.469 14.7304C120.521 17.7434 111.501 20.3466 104.976 21.0745C97.5 21.9085 95.4998 19.5 102.968 16.0976L102.968 16.099M124.35 8.75246C124.645 9.44635 124.721 9.68672 124.844 10M103.828 19.0087C102.5 19.2226 99.4998 19.5 103.285 17.5M103.828 19.0087C103.43 18.0949 103.138 17.1191 102.968 16.099M103.828 19.0087C103.616 18.5224 103.435 18.0187 103.285 17.5M103.285 17.5C103.154 17.0439 103.048 16.5763 102.968 16.099M103.285 17.5C103.18 17.0946 103.153 17.0001 102.968 16.099M113.915 25.7792C111.504 25.7792 109.269 24.9841 107.431 23.6283C110.504 23.6316 118.191 22.6106 124.351 18.5C122.617 22.7804 118.597 25.7792 113.915 25.7792Z"
+              stroke="white"
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
             />
-            <path
-              d="M102.828 17.0087C99.1152 18.0104 98.8364 15.1304 99.1611 13.5652C93.0774 18.5522 97.1686 19.8339 103.976 19.0745C103.532 18.4314 103.146 17.7399 102.828 17.0087Z"
-              fill="#D3D3D3"
-            />
-            <path
-              d="M124.381 10.3304C124.453 10.8761 124.49 11.4335 124.49 12C124.49 12.2453 124.483 12.4888 124.47 12.7304C133.855 6.63652 129.204 5.3913 125.706 5.53043C126.766 8.78609 126.485 8.45217 124.381 10.3304Z"
-              fill="#D3D3D3"
-            />
-          </svg>
+          </motion.svg>
           <button
             className="navbar-toggler"
             type="button"
@@ -71,13 +127,13 @@ export default function Navbar() {
           >
             <div className="navbar-nav">
               <a href="#about" className="nav-link">
-                About me
+                Sobre mí
               </a>
               <a href="#proyects" className="nav-link">
-                Proyects
+                Proyectos
               </a>
               <a href="#contact" className="nav-link">
-                Contact
+                Contacto
               </a>
             </div>
           </div>

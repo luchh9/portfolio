@@ -1,6 +1,5 @@
 import React from "react";
 import "../assets/css/About.css";
-
 import avatar from "../assets/statics/lm-avatar.png";
 import { motion } from "framer-motion";
 import git from "../assets/statics/git-logo.png";
@@ -76,7 +75,7 @@ export default function About() {
               className="avatar centrar"
               src={avatar}
               alt="avatar"
-              animate={{ y: [0, 5, -5, 0] }}
+              animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
             ></motion.img>
           </div>

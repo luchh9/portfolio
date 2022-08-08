@@ -3,23 +3,42 @@ import { motion } from "framer-motion";
 
 export default function Proyect(props) {
   const { title, description, code, img, tecnologies, demo } = props.item;
-  console.log(window.location.href);
+
+  const list = {
+    hidden: { opacity: 0.1 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const text = {
+    hidden: {
+      opacity: 0,
+      y: 200,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -200,
+    },
+  };
 
   return (
     <div className="row single-proyect">
-      <motion.div
-        whileInView={{ scale: [0.5, 1], y: [700, 0], opacity: [0.5, 1] }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="col-md-6 "
-      >
+      <motion.div className="col-md-6 ">
         <h2>{title}</h2>
         <p>{description}</p>
-        <motion.div
-          whileInView={{ scale: [0.5, 1], y: [700, 0] }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <motion.div variants={list} initial="hidden" whileInView="show">
           <ul className="proyect-links">
             <a href={code}>Source code</a>
             {demo !== "" ? (
@@ -38,7 +57,11 @@ export default function Proyect(props) {
       <div className="col-md-6 ">
         <motion.img
           className="imagen"
-          whileHover={{ scale: 0.9 }}
+          variants={text}
+          initial="hidden"
+          whileInView="show"
+          exit="exit"
+          viewport={{ once: true }}
           src={img}
           alt="proyect img"
         />
